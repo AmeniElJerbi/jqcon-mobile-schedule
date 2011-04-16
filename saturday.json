@@ -1,0 +1,120 @@
+[
+		{
+			"end" : "10:00a",
+			"name" : "Breakfast and Registration"
+		},
+		{
+			"end" : "10:15a",
+			"name" : "Welcome and Introduction"
+		},
+		{
+			"end" : "11:15a",
+			"name": "jQuery Keynote - John Resig"
+		},
+		{
+			"end" : "11:30a",
+			"name": "Break"
+		},
+		{
+			"end" : "12:30p",
+			"talks" : [
+				{ 
+					"title" : "jQuery Mobile",
+					"who" : "Todd Parker and Scott Jehl"
+				},
+				{
+					"title" : "Selectors in the Age of jQuery",
+					"who" : "Estelle Weyl"
+				}
+			]
+		},
+		{
+			"end" : "1:30p",
+			"name": "Lunch"
+		},
+		{
+			"end" : "2:15p",
+			"talks" : [
+				{ 
+					"title" : "Mobile Performance",
+					"who" : "Steve Souders"
+				},
+				{
+					"title" : "Introduction to jQuery UI",
+					"who" : "Andrew Wirick"
+				}
+			]
+		},
+		{
+			"end" : "2:30p",
+			"name": "Break"
+		},
+		{
+			"end" : "3:15p",
+			"talks" : [
+				{ 
+					"title" : "Progressive Enhancement 2.0 - Because the Web isn't Print",
+					"who" : "Nicholas Zakas"
+				},
+				{
+					"title" : "Introduction to jQuery Mobile",
+					"who" : "Raymond Camden"
+				}
+			]
+		},
+		{
+			"end" : "3:30p",
+			"name": "Break"
+		},
+		{
+			"end" : "4:00p",
+			"talks" : [
+				{ 
+					"title" : "jQuery + Popcorn.js = Interactive, Immersive HTML5 Video Experiences",
+					"who" : "Rick Waldron"
+				},
+				{
+					"title" : "Integrating Code Quality tools into your jQuery Development Workflow",
+					"who" : "Anton Kovalyov"
+				}
+			]
+		},
+		{
+			"end" : "4:15p",
+			"name": "Break"
+		},
+		{
+			"end" : "5:00p",
+			"talks" : [
+				{ 
+					"title" : "Aloha Editor; Leaving ExtJS for jQuery UI",
+					"who" : "Haymo Meran"
+				},
+				{
+					"title" : "Getting Truth Out of the DOM",
+					"who" : "Yehuda Katz"
+				}
+			]
+		},
+		{
+			"end" : "5:15p",
+			"name": "Break"
+		},
+		{
+			"end" : "6:00p",
+			"talks" : [
+				{ 
+					"title" : "Deferreds - Putting Laziness to Work",
+					"who" : "Dan Heberden"
+				},
+				{
+					"title" : "Prototyping and Unit Testing with Mockjax & mockJSON",
+					"who" : "Elijah Manor"
+				}
+			]
+		},
+		{
+			"end" : "8:00p",
+			"name": "(mt) Media Temple Party"
+		}
+]

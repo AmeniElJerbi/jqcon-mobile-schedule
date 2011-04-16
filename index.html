@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Conference 2011 Mobile Schedule</title>
+		<link rel="stylesheet" href="includes/jquery.mobile-1.0a4.1.min.css" />
+		<script src="includes/jquery-1.5.2.min.js"></script>
+		<script src="includes/jquery.mobile-1.0a4.1.min.js"></script>
+		<script src="includes/jquery.tmpl.min.js"></script>
+		<script>
+		$(".loadSchedule").live("pagebeforecreate",function(event){
+  			var page = $(this),
+  				day = page.attr("id"),
+  				list = [],
+  				start = 0,
+  				startAt = "09:00a";
+  			$.template("session",
+  						"<li class=\"ui-li ui-li-static ui-body-${$item.alternate()}\">${$item.getStart()} - ${end} : {{html $item.getName()}}</li>"
+  					);
+  			$.get(day+".json",function(schedule){
+  				$.tmpl(
+  					"session",
+  					schedule,
+  					{
+  						alternate : function(){
+  							return start++ % 2 == 0 ? "a" : "b";
+  						},
+  						getName : function(){
+  							if(this.data.talks){
+  								return "<div class=\"session\">"
+  										+this.data.talks[0].title
+  										+" - "
+  										+this.data.talks[0].who
+  										+"</div>"
+  										+"<div class=\"session\">"
+  										+this.data.talks[1].title
+  										+" - "
+  										+this.data.talks[1].who
+  										+"</div>";
+  							}else{
+  								return this.data.name;
+  							}
+  						},
+  						getStart : function(){
+  							var s = startAt;
+  							startAt = this.data.end;
+  							return s;
+  						}
+  					}
+  				).appendTo("#schedule");
+  			},"json");
+		});
+		</script>
+		<link rel="shortcut icon" href="http://static.jquery.com/favicon.ico" type="image/x-icon"/>
+		<style>
+			.session {
+				padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div data-role="page" id="home">
+			<div data-role="header">
+				<h1>jQuery Conference 2011 - Mobile Schedule</h2>
+			</div>
+			<div data-role="content">	
+				<ul data-role="listview">
+					<li><a href="saturday.html">Saturday</a></li>
+					<!-- <li><a href="sunday.html">Sunday</a></li> -->
+				</ul>		
+			</div>
+			<div data-role="footer">
+				<h4><a href="http://twitter.com/#!/search/%23jqcon">#jqcon</a> schedule<br />by <a href="http://twitter.com/aknosis">@aknosis</a></h4>
+			</div>
+		 </div>
+	</body>
+</html>
