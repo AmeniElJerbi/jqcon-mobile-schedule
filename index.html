@@ -7,10 +7,10 @@
 		<script src="includes/jquery.mobile-1.0a4.1.min.js"></script>
 		<script src="includes/jquery.tmpl.min.js"></script>
 		<script>
-		$(".loadSchedule").live("pagebeforecreate",function(event){
+		var sch;
+		$(".loadSchedule").live("pagecreate",function(event){
   			var page = $(this),
   				day = page.attr("id"),
-  				list = [],
   				start = 0,
   				startAt = "09:00a";
   			$.template("session",
@@ -26,16 +26,31 @@
   						},
   						getName : function(){
   							if(this.data.talks){
-  								return "<div class=\"session\">"
-  										+this.data.talks[0].title
-  										+" - "
-  										+this.data.talks[0].who
-  										+"</div>"
-  										+"<div class=\"session\">"
-  										+this.data.talks[1].title
-  										+" - "
-  										+this.data.talks[1].who
-  										+"</div>";
+  								var links = [
+  									this.data.talks[0]["sid"] ? "http://events.jquery.org/m/talks/talk.php?id="+this.data.talks[0]["sid"] : "#",
+  									this.data.talks[1]["sid"] ? "http://events.jquery.org/m/talks/talk.php?id="+this.data.talks[1]["sid"] : "#" 
+  								],
+  									spkr = [
+  									this.data.talks[0]["spkr"] ? "http://events.jquery.org/m/speakers/speaker.php?id="+this.data.talks[0]["spkr"] : "#",
+  									this.data.talks[1]["spkr"] ? "http://events.jquery.org/m/speakers/speaker.php?id="+this.data.talks[1]["spkr"] : "#"
+  								];
+  								
+  								return "<div data-role=\"controlgroup\">"
+	  									+"<a data-theme=\"b\" data-role=\"button\" href=\""+links[0]+"\">"
+	  										+this.data.talks[0].title
+	  									+"</a>"
+	  									+"<a data-theme=\"c\" data-role=\"button\" href=\""+spkr[0]+"\">"
+	  										+this.data.talks[0].who
+	  									+"</a>"
+	  								+"</div>"
+	  								+"<div data-role=\"controlgroup\">"
+	  									+"<a data-rel=\"dialog\" data-theme=\"b\" data-role=\"button\" href=\""+links[1]+"\">"
+	  										+this.data.talks[1].title
+	  									+"</a>"
+	  									+"<a data-rel=\"dialog\" data-theme=\"c\" data-role=\"button\" href=\""+spkr[1]+"\">"
+	  										+this.data.talks[1].who
+	  									+"</a>"
+	  								+"</div>";
   							}else{
   								return this.data.name;
   							}
@@ -47,15 +62,16 @@
   						}
   					}
   				).appendTo("#schedule");
+  				$("#"+day).removeClass('loadSchedule').page('destroy').page();
   			},"json");
 		});
+		
+        $("#dialog").live("pageshow", function() {
+           $('#title').html('title');
+           $('#desc').html('desc');
+        });
 		</script>
 		<link rel="shortcut icon" href="http://static.jquery.com/favicon.ico" type="image/x-icon"/>
-		<style>
-			.session {
-				padding: 5px;
-			}
-		</style>
 	</head>
 	<body>
 		<div data-role="page" id="home">
@@ -65,7 +81,7 @@
 			<div data-role="content">	
 				<ul data-role="listview">
 					<li><a href="saturday.html">Saturday</a></li>
-					<!-- <li><a href="sunday.html">Sunday</a></li> -->
+					<li><a href="sunday.html">Sunday</a></li>
 				</ul>		
 			</div>
 			<div data-role="footer">

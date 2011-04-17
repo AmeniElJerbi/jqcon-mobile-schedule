@@ -1,6 +1,170 @@
-{
-	"schedule":
-	{
-		
-	}
-}
+[
+		{
+			"end" : "10:00a",
+			"name" : "Breakfast and Registration"
+		},
+		{
+			"end" : "10:15a",
+			"name" : "Introduction"
+		},
+		{
+			"end" : "11:00a",
+			"name": "jQuery UI Keynote - Richard D. Worth"
+		},
+		{
+			"end" : "11:15a",
+			"name": "Break"
+		},
+		{
+			"end" : "12:00p",
+			"talks" : [
+				{ 
+					"title" : "IM IN UR AJAX PROCESSIN UR DATA",
+					"who" : "Julian Aubourg",
+					"sid": "im-in-ur-ajax-processin-ur-data",
+					"spkr": "julian-aubourg"
+					
+				},
+				{
+					"title" : "Filling the HTML5 & CSS3 Gaps with Polyfills and Shims",
+					"who" : "Rey Bango",
+					"sid": "filling-the-html5-css3-gaps-with-polyfills-and-shims",
+					"spkr": "rey-bango"
+				}
+			]
+		},
+		{
+			"end" : "1:00p",
+			"name": "Lunch"
+		},
+		{
+			"end" : "1:30p",
+			"talks" : [
+				{ 
+					"title" : "Nailing the Interactions on Pageless Apps (with Backbone.js)",
+					"who" : "Matt Kelly",
+					"sid": "nailing-the-interactions-on-pageless-apps-with-backbone-js-",
+					"spkr": "matt-kelly"
+				},
+				{
+					"title" : "How jQuery is helping Pixar to make their movies",
+					"who" : "Philip Floetotto",
+					"sid": "how-jquery-is-helping-pixar-to-make-their-movies",
+					"spkr": "philip-floetotto"
+				}
+			]
+		},
+		{
+			"end" : "1:45p",
+			"name": "Break"
+		},
+		{
+			"end" : "2:30p",
+			"talks" : [
+				{ 
+					"title" : "Harnessing jQuery Templates and jQuery Data sid, to build dynamic data-driven browser apps",
+					"who" : "Boris Moore",
+					"sid": "harnessing-jquery-templates-and-jquery-data-link-to-build-dynamic-data-driven-browser-apps",
+					"spkr": "boris-moore"
+				},
+				{
+					"title" : "Presentational jQuery",
+					"who" : "Doug Neiner",
+					"sid": "presentational-jquery",
+					"spkr": "doug-neiner"
+				}
+			]
+		},
+		{
+			"end" : "2:45p",
+			"name": "Break"
+		},
+		{
+			"end" : "3:30p",
+			"talks" : [
+				{ 
+					"title" : "The jQuery UI Widget Factory: WAT?",
+					"who" : "Adam Sontag",
+					"sid": "the-jquery-ui-widget-factory-wat",
+					"spkr": "adam-sontag"
+				},
+				{
+					"title" : "Sneaking structure into your DOM-based application",
+					"who" : "Garann Means",
+					"sid": "sneaking-structure-into-your-dom-based-application",
+					"spkr": "garann-means"
+				}
+			]
+		},
+		{
+			"end" : "3:45p",
+			"name": "Break"
+		},
+		{
+			"end" : "4:15p",
+			"talks" : [
+				{ 
+					"title" : "The Middle Way: Developing Hybrid Mobile Apps",
+					"who" : "Alex Kessinger",
+					"sid": "the-middle-way-developing-hybrid-mobile-apps",
+					"spkr": "alex-kessinger"
+				},
+				{
+					"title" : "jQuery Development Productivity++",
+					"who" : "Paul Irish",
+					"sid": "jquery-development-productivity",
+					"spkr": "paul-irish"
+				}
+			]
+		},
+		{
+			"end" : "4:30p",
+			"name": "Break"
+		},
+		{
+			"end" : "5:15p",
+			"talks" : [
+				{ 
+					"title" : "Natural Language UI Testing using Behavior Driven Development with Pavlov and QUnit",
+					"who" : "Eric DeLabar",
+					"sid": "natural-language-ui-testing-using-behavior-driven-development-with-pavlov-and-qunit",
+					"spkr": "eric-delabar"
+				},
+				{
+					"title" : "Building UI with Wijmo",
+					"who" : "Chris Bannon",
+					"sid": "building-ui-with-wijmo",
+					"spkr": "chris-bannon"
+				}
+			]
+		},
+		{
+			"end" : "5:30p",
+			"name": "Break"
+		},
+		{
+			"end" : "6:00p",
+			"talks" : [
+				{ 
+					"title" : "Understanding jQuery Events, and working new HTML5 APIs",
+					"who" : "Boaz Sender",
+					"sid": "understanding-jquery-events-and-working-new-html5-apis",
+					"spkr": "boaz-sender"
+				},
+				{
+					"title" : "Creating mind-blowing UX - \"Building great user experiences with the help of jQuery\"",
+					"who" : "Darcy Clarke",
+					"sid": "creating-mind-blowing-ux-building-great-user-experiences-with-the-help-of-jquery",
+					"spkr": "darcy-clarke"
+				}
+			]
+		},
+		{
+			"end" : "6:15p",
+			"name": "Break"
+		},
+		{
+			"end" : "7:00p",
+			"name": "Panel"
+		}
+]
